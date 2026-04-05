@@ -297,7 +297,16 @@
         }
 
         .nav-menu {
-          display: none;
+          gap: 14px;
+        }
+
+        .nav-menu a {
+          font-size: 13px;
+        }
+
+        .outline-btn {
+          padding: 9px 18px;
+          font-size: 13px;
         }
       }
 
@@ -322,55 +331,55 @@
     <h1 class="page-title">Trekt Product Management Training</h1>
 
     <main class="wrapper">
-      <header class="nav">
+      <header class="nav" role="banner" aria-label="Site header">
         <div class="logo">Trekt<small>Product education platform</small></div>
-        <nav class="nav-menu">
-          <a href="#">Certificates</a>
-          <a href="#">Testimonials</a>
-          <a href="#">Partners</a>
-          <a href="#">FAQ</a>
-          <a href="#" class="outline-btn">Contact us</a>
+        <nav class="nav-menu" aria-label="Primary">
+          <a href="#certificates">Certificates</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#partners">Partners</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact" class="outline-btn">Contact us</a>
         </nav>
       </header>
 
-      <section class="hero">
+      <section class="hero" id="contact">
         <div>
           <h2>We build product managers</h2>
           <p>Get your next Product Management job or promotion.</p>
           <div class="hero-actions">
-            <a href="#" class="primary-btn">Take the test</a>
-            <a href="#" class="ghost-btn">Learn more</a>
+            <a href="#assessment" class="primary-btn">Take the test</a>
+            <a href="#certificates" class="ghost-btn">Learn more</a>
           </div>
         </div>
         <div class="img-box">
-          <img src="https://undraw.co/api/illustrations/8a4e31a6-2aa2-4671-b976-731f1fdbde3b" alt="Illustration of an instructor guiding product management learners" />
+          <img src="https://undraw.co/api/illustrations/8a4e31a6-2aa2-4671-b976-731f1fdbde3b" alt="Illustration of an instructor guiding product management learners" width="640" height="420" />
         </div>
       </section>
 
-      <section class="features">
+      <section class="features" id="certificates">
         <article class="feature">
-          <i>👨‍💻</i>
+          <i aria-hidden="true">👨‍💻</i>
           <h4>Live Online</h4>
           <p>Learn, interact and participate from home</p>
         </article>
         <article class="feature">
-          <i>🧩</i>
+          <i aria-hidden="true">🧩</i>
           <h4>Applied Projects</h4>
           <p>Deal with real-world projects relevant to your learning program</p>
         </article>
         <article class="feature">
-          <i>🧠</i>
+          <i aria-hidden="true">🧠</i>
           <h4>Mentorship</h4>
           <p>Keep engaged with mentor assistance during your learning</p>
         </article>
         <article class="feature">
-          <i>📜</i>
+          <i aria-hidden="true">📜</i>
           <h4>Certification</h4>
           <p>Earn a certificate the employers will recognize</p>
         </article>
       </section>
 
-      <section class="title-center">
+      <section class="title-center" id="testimonials">
         <h3>How a Trekt Certificate Accelerates Your Career Growth</h3>
         <p>
           Our Certificates are the most inclusive and well-recognized credentials by employers hiring product managers.
@@ -379,7 +388,7 @@
 
       <section class="course-row">
         <div class="img-box">
-          <img src="https://undraw.co/api/illustrations/52c6bf13-d38b-4ba5-a46e-0566cb1ce423" alt="Illustration of a learner building product strategy skills on a board" />
+          <img src="https://undraw.co/api/illustrations/52c6bf13-d38b-4ba5-a46e-0566cb1ce423" alt="Illustration of a learner building product strategy skills on a board" width="640" height="420" />
         </div>
         <div class="course-content">
           <h4>Product Manager Certificate</h4>
@@ -387,15 +396,15 @@
           <p><strong>Perfect for:</strong> Aspiring Product Managers from any professional background.</p>
           <p><strong>Get your first product management job:</strong> Learn how to build digital products from end to end.</p>
           <div class="cta-row">
-            <a href="#" class="primary-btn">Join now</a>
-            <a href="#" class="ghost-btn">View program</a>
+            <a href="#contact" class="primary-btn">Join now</a>
+            <a href="#certificates" class="ghost-btn">View program</a>
           </div>
         </div>
       </section>
 
       <section class="course-row reverse">
         <div class="img-box">
-          <img src="https://undraw.co/api/illustrations/85dc0fdb-fad5-4068-9036-9d5b4fdad65c" alt="Illustration of team members reviewing growth metrics and leadership goals" />
+          <img src="https://undraw.co/api/illustrations/85dc0fdb-fad5-4068-9036-9d5b4fdad65c" alt="Illustration of team members reviewing growth metrics and leadership goals" width="640" height="420" />
         </div>
         <div class="course-content">
           <h4>Product Leader Certificate</h4>
@@ -403,15 +412,15 @@
           <p><strong>Perfect for:</strong> PMCs graduates or existing Product Managers with 3+ years of experience.</p>
           <p><strong>Move up the product management career ladder:</strong> Operate as a senior-level PM.</p>
           <div class="cta-row">
-            <a href="#" class="primary-btn">Join now</a>
-            <a href="#" class="ghost-btn">View program</a>
+            <a href="#contact" class="primary-btn">Join now</a>
+            <a href="#certificates" class="ghost-btn">View program</a>
           </div>
         </div>
       </section>
 
-      <section class="course-row">
+      <section class="course-row" id="partners">
         <div class="img-box">
-          <img src="https://undraw.co/api/illustrations/f8f7c2c8-bce7-42a4-9cc8-73b66f6c5b9c" alt="Illustration of executives collaborating on product roadmap decisions" />
+          <img src="https://undraw.co/api/illustrations/f8f7c2c8-bce7-42a4-9cc8-73b66f6c5b9c" alt="Illustration of executives collaborating on product roadmap decisions" width="640" height="420" />
         </div>
         <div class="course-content">
           <h4>Product Executive Certificate</h4>
@@ -419,26 +428,26 @@
           <p><strong>Perfect for:</strong> PLC graduates or existing Product Managers with 5+ years of experience.</p>
           <p><strong>Join the C-Suite:</strong> Our most advanced certificate is restricted to proven product leaders.</p>
           <div class="cta-row">
-            <a href="#" class="primary-btn">Join now</a>
-            <a href="#" class="ghost-btn">View program</a>
+            <a href="#contact" class="primary-btn">Join now</a>
+            <a href="#certificates" class="ghost-btn">View program</a>
           </div>
         </div>
       </section>
 
-      <section class="purple-banner">
+      <section class="purple-banner" id="assessment">
         <div>
           <h4>Find out how good you are at product management</h4>
           <p>Take a simple test to determine your level of knowledge. Answer a few questions and we will send a suitable course program to your email.</p>
-          <a href="#" class="primary-btn">Take the test</a>
+          <a href="#contact" class="primary-btn">Take the test</a>
         </div>
         <div class="img-box">
-          <img src="https://undraw.co/api/illustrations/cf6f0f3d-7f06-4df0-a5a0-3362fe715f90" alt="Illustration of a person thinking through a product assessment test" />
+          <img src="https://undraw.co/api/illustrations/cf6f0f3d-7f06-4df0-a5a0-3362fe715f90" alt="Illustration of a person thinking through a product assessment test" width="640" height="420" />
         </div>
       </section>
 
-      <section class="why">
+      <section class="why" id="faq">
         <div class="img-box">
-          <img src="https://undraw.co/api/illustrations/8b9ecfd5-9051-4af1-a8cb-e5bcfcd4f7f3" alt="Illustration of online learning tools including laptop, diploma, and books" />
+          <img src="https://undraw.co/api/illustrations/8b9ecfd5-9051-4af1-a8cb-e5bcfcd4f7f3" alt="Illustration of online learning tools including laptop, diploma, and books" width="640" height="420" />
         </div>
         <div>
           <h4>Why Choose Trekt</h4>
