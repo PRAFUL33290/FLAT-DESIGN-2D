@@ -1,333 +1,456 @@
 <!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="IMG_1505.jpeg"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-primary-container": "#330070",
-                    "primary-dim": "#6038a2",
-                    "surface-container-lowest": "#ffffff",
-                    "background": "#fef3ff",
-                    "on-error": "#ffefef",
-                    "surface-dim": "#eac8ff",
-                    "on-primary-fixed-variant": "#3d0b7f",
-                    "surface": "#fef3ff",
-                    "primary-fixed-dim": "#a981ef",
-                    "surface-container-high": "#f2daff",
-                    "surface-container": "#f6e1ff",
-                    "tertiary-dim": "#8f2a49",
-                    "secondary-container": "#ddc8ff",
-                    "outline": "#866d97",
-                    "on-tertiary-fixed": "#380014",
-                    "on-surface": "#3b264b",
-                    "on-tertiary": "#ffeff0",
-                    "on-error-container": "#510017",
-                    "error-dim": "#a70138",
-                    "on-secondary-container": "#503d74",
-                    "on-secondary-fixed": "#3c2a5f",
-                    "on-surface-variant": "#6a527a",
-                    "tertiary-container": "#ff8fa9",
-                    "on-background": "#3b264b",
-                    "inverse-surface": "#180428",
-                    "tertiary-fixed-dim": "#f87c9b",
-                    "on-primary": "#f9efff",
-                    "inverse-primary": "#b78efe",
-                    "on-secondary-fixed-variant": "#5a477e",
-                    "tertiary-fixed": "#ff8fa9",
-                    "surface-container-low": "#fbecff",
-                    "primary-fixed": "#b78efe",
-                    "secondary-dim": "#59467d",
-                    "on-secondary": "#f8efff",
-                    "on-tertiary-fixed-variant": "#711133",
-                    "primary-container": "#b78efe",
-                    "tertiary": "#9e3655",
-                    "surface-container-highest": "#efd3ff",
-                    "secondary": "#65518a",
-                    "secondary-fixed-dim": "#d0b9f9",
-                    "error-container": "#f74b6d",
-                    "surface-bright": "#fef3ff",
-                    "on-tertiary-container": "#65042b",
-                    "surface-tint": "#6c45af",
-                    "error": "#b41340",
-                    "secondary-fixed": "#ddc8ff",
-                    "inverse-on-surface": "#ae93bf",
-                    "primary": "#6c45af",
-                    "outline-variant": "#bea3d0",
-                    "surface-variant": "#efd3ff",
-                    "on-primary-fixed": "#010004"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "fontFamily": {
-                    "headline": [ "Manrope" ],
-                    "body": [ "Inter" ],
-                    "label": [ "Inter" ]
-            }
-          },
-        },
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page - Trekt</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+    />
+    <style>
+      :root {
+        --bg: #f0eefc;
+        --card: #ffffff;
+        --text: #252046;
+        --muted: #6f678b;
+        --primary: #7b4cd9;
+        --line: #ece8f8;
       }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Nunito", sans-serif;
+        color: var(--text);
+        background: linear-gradient(to bottom, #f7f7ff 70px, var(--bg) 70px);
+      }
+
+      .top-wave {
+        height: 150px;
+        background: var(--bg);
+        border-bottom-left-radius: 60% 28%;
+        border-bottom-right-radius: 60% 28%;
+      }
+
+      h1.page-title {
+        margin: -110px 0 30px;
+        text-align: center;
+        font-size: 52px;
+        font-weight: 800;
+      }
+
+      .wrapper {
+        width: min(1150px, 92vw);
+        margin: 0 auto 90px;
+        background: var(--card);
+        border-radius: 8px;
+        box-shadow: 0 12px 35px rgba(36, 20, 68, 0.08);
+        padding: 28px 42px 44px;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 42px;
+        font-weight: 800;
+        color: #6438c2;
+      }
+
+      .logo small {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--muted);
+        margin-left: 6px;
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        font-weight: 600;
+      }
+
+      .nav-menu a {
+        color: var(--text);
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .outline-btn,
+      .ghost-btn,
+      .primary-btn {
+        border-radius: 22px;
+        padding: 11px 28px;
+        font-weight: 700;
+        border: 1px solid var(--primary);
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+      }
+
+      .outline-btn,
+      .ghost-btn {
+        color: var(--primary);
+        background: #fff;
+      }
+
+      .primary-btn {
+        background: var(--primary);
+        color: #fff;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+        gap: 38px;
+        margin: 46px 0 50px;
+        align-items: center;
+      }
+
+      .hero h2 {
+        margin: 0;
+        font-size: 56px;
+        line-height: 1.03;
+      }
+
+      .hero p {
+        color: var(--muted);
+        margin: 18px 0 24px;
+        max-width: 360px;
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 14px;
+      }
+
+      .img-box img {
+        width: 100%;
+        border-radius: 16px;
+      }
+
+      .features {
+        margin: 34px 0 78px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        text-align: center;
+      }
+
+      .feature i {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        display: inline-grid;
+        place-items: center;
+        background: #f4f0fd;
+        color: var(--primary);
+        font-style: normal;
+        font-size: 22px;
+      }
+
+      .feature h4 {
+        margin: 14px 0 8px;
+      }
+
+      .feature p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .title-center {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .title-center h3 {
+        font-size: 52px;
+        margin: 0 0 14px;
+      }
+
+      .title-center p {
+        max-width: 900px;
+        margin: 0 auto;
+        color: var(--muted);
+      }
+
+      .course-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+        align-items: center;
+        margin: 28px 0 50px;
+      }
+
+      .course-row.reverse .img-box {
+        order: 2;
+      }
+
+      .course-row.reverse .course-content {
+        order: 1;
+      }
+
+      .course-content h4 {
+        margin: 0 0 10px;
+        font-size: 39px;
+      }
+
+      .course-meta {
+        display: flex;
+        gap: 20px;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .course-content p {
+        color: var(--muted);
+        margin: 10px 0 8px;
+      }
+
+      .cta-row {
+        display: flex;
+        gap: 12px;
+        margin-top: 16px;
+      }
+
+      .purple-banner {
+        margin: 56px 0;
+        border-radius: 24px;
+        padding: 40px 38px;
+        background: linear-gradient(135deg, #7f49de, #8e55f2);
+        color: #fff;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+        align-items: center;
+      }
+
+      .purple-banner h4 {
+        font-size: 48px;
+        margin: 0 0 10px;
+      }
+
+      .purple-banner p {
+        color: #e9dbff;
+        max-width: 420px;
+      }
+
+      .purple-banner .primary-btn {
+        background: #fff;
+        color: var(--primary);
+        border-color: #fff;
+      }
+
+      .why {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 34px;
+        align-items: center;
+        margin-top: 30px;
+      }
+
+      .why h4 {
+        font-size: 46px;
+        margin: 0 0 12px;
+      }
+
+      .why p {
+        color: var(--muted);
+      }
+
+      .why ul {
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .why li {
+        margin: 11px 0;
+        color: #3b315d;
+        font-weight: 700;
+      }
+
+      .why li::before {
+        content: "◉";
+        color: #9d77eb;
+        margin-right: 10px;
+      }
+
+      @media (max-width: 1024px) {
+        h1.page-title,
+        .title-center h3,
+        .hero h2,
+        .course-content h4,
+        .purple-banner h4,
+        .why h4 {
+          font-size: 36px;
         }
-        .glass-nav {
-            backdrop-filter: blur(20px);
+
+        .nav-menu {
+          display: none;
         }
-        .trek-trace {
-            background-image: radial-gradient(circle, #bea3d0 1px, transparent 1px);
-            background-size: 24px 24px;
+      }
+
+      @media (max-width: 860px) {
+        .hero,
+        .course-row,
+        .purple-banner,
+        .why,
+        .features {
+          grid-template-columns: 1fr;
         }
+
+        .course-row.reverse .img-box,
+        .course-row.reverse .course-content {
+          order: initial;
+        }
+      }
     </style>
-</head>
-<body class="bg-surface font-body text-on-surface antialiased">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-purple-50/70 backdrop-blur-xl shadow-xl shadow-purple-900/5 h-20">
-<div class="flex justify-between items-center max-w-7xl mx-auto px-12 h-full">
-<div class="text-2xl font-black text-purple-900 tracking-tighter font-headline">Trekt</div>
-<div class="hidden md:flex items-center space-x-8 font-headline font-semibold tracking-tight">
-<a class="text-purple-900/60 hover:text-purple-900 transition-colors" href="#">Curriculum</a>
-<a class="text-purple-900/60 hover:text-purple-900 transition-colors" href="#">Pathways</a>
-<a class="text-purple-900/60 hover:text-purple-900 transition-colors" href="#">Mentorship</a>
-<a class="text-purple-900/60 hover:text-purple-900 transition-colors" href="#">Community</a>
-<a class="text-purple-900/60 hover:text-purple-900 transition-colors" href="#">Pricing</a>
-</div>
-<div class="flex items-center space-x-6">
-<button class="text-purple-900/60 font-headline font-semibold hover:text-purple-900">Sign In</button>
-<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-headline font-bold text-sm hover:bg-primary-dim transition-all active:scale-95">Join the Atelier</button>
-</div>
-</div>
-</nav>
-<main class="pt-20">
-<!-- Hero Section -->
-<section class="relative overflow-hidden py-24 md:py-32">
-<div class="max-w-7xl mx-auto px-12 relative z-10 grid md:grid-cols-2 gap-16 items-center">
-<div class="space-y-8">
-<div class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase">
-                        The Digital Atelier
-                    </div>
-<h1 class="text-6xl md:text-8xl font-black font-headline text-on-surface tracking-tight leading-[0.9]">
-                        We build <br/>
-<span class="text-primary italic">product</span> <br/>
-                        managers.
-                    </h1>
-<p class="text-xl text-on-surface-variant max-w-lg leading-relaxed">
-                        Master the craft of product management through high-intensity execution, mentorship from industry titans, and a curriculum built for the next generation of digital leaders.
-                    </p>
-<div class="flex flex-wrap gap-4">
-<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-headline font-bold text-lg shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">Take the test</button>
-<button class="bg-surface-container-high text-on-primary-container px-8 py-4 rounded-full font-headline font-bold text-lg hover:bg-surface-container-highest transition-all">Learn more</button>
-</div>
-</div>
-<div class="relative">
-<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-<div class="absolute -bottom-12 -left-12 w-64 h-64 bg-tertiary/10 rounded-full blur-3xl"></div>
-<img class="rounded-xl shadow-2xl relative z-10 w-full h-[500px] object-cover" data-alt="Modern minimalist workspace with high-end tech accessories, purple ambient lighting, and abstract digital art on a large monitor" src="IMG_1505.jpeg"/>
-<div class="absolute -bottom-6 -right-6 bg-surface-container-lowest p-6 rounded-xl shadow-xl z-20 border border-outline-variant/20 max-w-[200px]">
-<p class="text-xs font-bold text-primary mb-1 uppercase tracking-tighter">Next Cohort</p>
-<p class="text-lg font-headline font-bold text-on-surface">Oct 24, 2024</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Course Types (The Trek Path) -->
-<section class="py-24 bg-surface-container-low trek-trace">
-<div class="max-w-7xl mx-auto px-12">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-<div class="max-w-xl">
-<h2 class="text-4xl md:text-5xl font-black font-headline text-on-surface tracking-tighter mb-4">Four modalities. One outcome.</h2>
-<p class="text-on-surface-variant">We've redesigned the educational experience to fit the intensity of your career goals.</p>
-</div>
-<div class="flex items-center text-primary font-bold">
-<span>Explore all formats</span>
-<span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-<div class="bg-surface-container-lowest p-8 rounded-xl group hover:bg-primary transition-all duration-500">
-<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl mb-6" data-icon="settings_input_antenna">settings_input_antenna</span>
-<h3 class="text-xl font-headline font-bold text-on-surface group-hover:text-on-primary mb-3">Live Online</h3>
-<p class="text-on-surface-variant group-hover:text-on-primary/80 text-sm">Real-time collaboration with peers and experts across the globe.</p>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-xl group hover:bg-primary transition-all duration-500">
-<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl mb-6" data-icon="account_tree">account_tree</span>
-<h3 class="text-xl font-headline font-bold text-on-surface group-hover:text-on-primary mb-3">Applied Projects</h3>
-<p class="text-on-surface-variant group-hover:text-on-primary/80 text-sm">Build real products for real companies. No theoretical fluff.</p>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-xl group hover:bg-primary transition-all duration-500">
-<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl mb-6" data-icon="psychology">psychology</span>
-<h3 class="text-xl font-headline font-bold text-on-surface group-hover:text-on-primary mb-3">Mentorship</h3>
-<p class="text-on-surface-variant group-hover:text-on-primary/80 text-sm">1:1 guidance from leaders at Google, Stripe, and Airbnb.</p>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-xl group hover:bg-primary transition-all duration-500">
-<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl mb-6" data-icon="verified">verified</span>
-<h3 class="text-xl font-headline font-bold text-on-surface group-hover:text-on-primary mb-3">Certification</h3>
-<p class="text-on-surface-variant group-hover:text-on-primary/80 text-sm">Industry-recognized credentials that open doors.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Course Catalog -->
-<section class="py-32">
-<div class="max-w-7xl mx-auto px-12">
-<div class="text-center mb-20">
-<h2 class="text-5xl font-black font-headline text-on-surface tracking-tighter mb-4">Choose your track</h2>
-<div class="w-24 h-1.5 bg-tertiary mx-auto"></div>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-<!-- Certificate 1 -->
-<div class="flex flex-col">
-<div class="relative mb-6">
-<img class="w-full h-72 object-cover rounded-xl shadow-lg" data-alt="Close-up of a sleek digital interface showing product analytics and roadmap diagrams with vibrant purple accents" src="IMG_1505.jpeg"/>
-<div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-on-surface">Entry to Mid-Level</div>
-</div>
-<h3 class="text-2xl font-headline font-extrabold text-on-surface mb-2">Product Manager Certificate</h3>
-<p class="text-on-surface-variant mb-6 grow">Master the fundamentals of product discovery, agile execution, and stakeholder management.</p>
-<div class="flex items-center justify-between py-4 border-t border-outline-variant/30">
-<span class="font-headline font-bold text-primary">12 Weeks</span>
-<button class="text-primary font-bold flex items-center hover:translate-x-1 transition-transform">
-                                View syllabus <span class="material-symbols-outlined text-sm ml-1" data-icon="north_east">north_east</span>
-</button>
-</div>
-</div>
-<!-- Certificate 2 -->
-<div class="flex flex-col">
-<div class="relative mb-6">
-<img class="w-full h-72 object-cover rounded-xl shadow-lg" data-alt="Wide shot of a collaborative meeting room with glass walls, sticky notes on the windows, and professional people discussing strategy" src="IMG_1505.jpeg"/>
-<div class="absolute top-4 left-4 bg-tertiary text-on-tertiary px-4 py-1.5 rounded-full text-xs font-bold">Popular</div>
-</div>
-<h3 class="text-2xl font-headline font-extrabold text-on-surface mb-2">Product Leader Certificate</h3>
-<p class="text-on-surface-variant mb-6 grow">Transition from individual contributor to team leader. Focus on strategy, hiring, and product culture.</p>
-<div class="flex items-center justify-between py-4 border-t border-outline-variant/30">
-<span class="font-headline font-bold text-primary">8 Weeks</span>
-<button class="text-primary font-bold flex items-center hover:translate-x-1 transition-transform">
-                                View syllabus <span class="material-symbols-outlined text-sm ml-1" data-icon="north_east">north_east</span>
-</button>
-</div>
-</div>
-<!-- Certificate 3 -->
-<div class="flex flex-col">
-<div class="relative mb-6">
-<img class="w-full h-72 object-cover rounded-xl shadow-lg" data-alt="Abstract architectural shot representing scale and vision, featuring high ceilings and long perspective lines in a modern gallery" src="IMG_1505.jpeg"/>
-<div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-on-surface">Executive</div>
-</div>
-<h3 class="text-2xl font-headline font-extrabold text-on-surface mb-2">Product Executive Certificate</h3>
-<p class="text-on-surface-variant mb-6 grow">Advanced training for VPs and CPOs. Strategic foresight, portfolio management, and organizational scale.</p>
-<div class="flex items-center justify-between py-4 border-t border-outline-variant/30">
-<span class="font-headline font-bold text-primary">6 Weeks</span>
-<button class="text-primary font-bold flex items-center hover:translate-x-1 transition-transform">
-                                View syllabus <span class="material-symbols-outlined text-sm ml-1" data-icon="north_east">north_east</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Skill Check CTA Banner -->
-<section class="max-w-7xl mx-auto px-12 mb-32">
-<div class="bg-primary-dim rounded-3xl p-12 md:p-20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
-<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
-<svg class="w-full h-full fill-current text-surface" viewbox="0 0 100 100">
-<path d="M0,100 C20,80 40,80 60,100 C80,120 100,120 120,100" fill="transparent" stroke="currentColor" stroke-width="0.5"></path>
-<path d="M0,80 C20,60 40,60 60,80 C80,100 100,100 120,80" fill="transparent" stroke="currentColor" stroke-width="0.5"></path>
-</svg>
-</div>
-<div class="relative z-10 space-y-6 max-w-xl text-center md:text-left">
-<h2 class="text-4xl md:text-5xl font-black font-headline text-on-primary leading-tight">Find out how good you are</h2>
-<p class="text-on-primary/80 text-lg">Take our 15-minute diagnostic assessment designed by top PM recruiters to benchmark your skills against industry standards.</p>
-<button class="bg-surface text-primary px-10 py-4 rounded-full font-headline font-bold text-lg shadow-xl hover:bg-surface-bright transition-all">Start the assessment</button>
-</div>
-<div class="relative z-10 bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-white/20 w-full max-w-xs text-center">
-<p class="text-on-primary text-5xl font-black mb-2">4,200+</p>
-<p class="text-on-primary/70 text-sm uppercase font-bold tracking-widest">PMs Evaluated</p>
-</div>
-</div>
-</section>
-<!-- Why Choose Trekt (Bento Grid Style) -->
-<section class="py-24 bg-surface">
-<div class="max-w-7xl mx-auto px-12">
-<h2 class="text-4xl font-black font-headline text-on-surface tracking-tighter mb-16">The Trekt Velocity</h2>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[280px]">
-<div class="md:col-span-8 bg-surface-container-low rounded-2xl p-10 flex flex-col justify-end relative overflow-hidden group">
-<div class="absolute top-0 right-0 p-8">
-<span class="material-symbols-outlined text-6xl text-primary/20 group-hover:scale-110 transition-transform duration-500" data-icon="fitness_center">fitness_center</span>
-</div>
-<h3 class="text-2xl font-headline font-bold text-on-surface mb-2">Challenging exercises</h3>
-<p class="text-on-surface-variant max-w-md">Our curriculum is built on high-friction learning. We push you to solve the hardest problems PMs face in the real world.</p>
-</div>
-<div class="md:col-span-4 bg-tertiary-container rounded-2xl p-10 flex flex-col justify-end relative overflow-hidden">
-<div class="absolute top-10 left-10">
-<span class="material-symbols-outlined text-4xl text-on-tertiary-container" data-icon="group">group</span>
-</div>
-<h3 class="text-2xl font-headline font-bold text-on-tertiary-container mb-2">Direct mentorship</h3>
-<p class="text-on-tertiary-container/80">No junior TAs. Only seasoned veterans.</p>
-</div>
-<div class="md:col-span-4 bg-primary rounded-2xl p-10 flex flex-col justify-end relative overflow-hidden">
-<div class="absolute top-10 left-10">
-<span class="material-symbols-outlined text-4xl text-on-primary" data-icon="stars">stars</span>
-</div>
-<h3 class="text-2xl font-headline font-bold text-on-primary mb-2">Acing interviews</h3>
-<p class="text-on-primary/80">Tailored coaching for the FAANG loop.</p>
-</div>
-<div class="md:col-span-8 bg-surface-container-high rounded-2xl p-10 flex flex-col justify-end relative overflow-hidden">
-<div class="absolute inset-0 opacity-20 pointer-events-none">
-<img class="w-full h-full object-cover" data-alt="Network of interconnected dots and lines representing professional connections and career paths" src="IMG_1505.jpeg"/>
-</div>
-<h3 class="text-2xl font-headline font-bold text-on-surface mb-2">Company connections</h3>
-<p class="text-on-surface-variant max-w-md">Get fast-tracked into hiring pipelines at top-tier tech companies through our exclusive partner network.</p>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full mt-24 bg-purple-100">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-12 py-16">
-<div class="col-span-2 md:col-span-1">
-<div class="font-manrope font-bold text-lg text-purple-900 mb-6">Trekt</div>
-<p class="text-purple-900/70 text-sm leading-relaxed max-w-xs">
-                    The elite atelier for the next generation of product leaders. Crafted with rigor in the digital age.
-                </p>
-</div>
-<div>
-<h4 class="font-bold text-purple-800 mb-6 uppercase text-xs tracking-widest">Resources</h4>
-<ul class="space-y-4 font-inter text-sm antialiased">
-<li><a class="text-purple-900/70 hover:underline decoration-purple-400 decoration-2 underline-offset-4" href="#">Case Studies</a></li>
-<li><a class="text-purple-900/70 hover:underline decoration-purple-400 decoration-2 underline-offset-4" href="#">Frameworks</a></li>
-<li><a class="text-purple-900/70 hover:underline decoration-purple-400 decoration-2 underline-offset-4" href="#">The Trek Blog</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold text-purple-800 mb-6 uppercase text-xs tracking-widest">Company</h4>
-<ul class="space-y-4 font-inter text-sm antialiased">
-<li><a class="text-purple-900/70 hover:underline decoration-purple-400 decoration-2 underline-offset-4" href="#">Terms of Service</a></li>
-<li><a class="text-purple-900/70 hover:underline decoration-purple-400 decoration-2 underline-offset-4" href="#">Privacy Policy</a></li>
-<li><a class="text-purple-900/70 hover:underline decoration-purple-400 decoration-2 underline-offset-4" href="#">Contact Support</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold text-purple-800 mb-6 uppercase text-xs tracking-widest">Newsletter</h4>
-<div class="flex gap-2">
-<input class="bg-white/50 border-none rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-primary w-full" placeholder="Your email" type="email"/>
-<button class="bg-primary text-on-primary p-2 rounded-lg"><span class="material-symbols-outlined" data-icon="send">send</span></button>
-</div>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-12 py-8 border-t border-purple-200">
-<p class="font-inter text-sm antialiased text-purple-900/70">© 2024 Trekt Digital Atelier. All rights reserved.</p>
-</div>
-</footer>
-</body></html>
+  </head>
+  <body>
+    <div class="top-wave"></div>
+    <h1 class="page-title">Main Page</h1>
+
+    <main class="wrapper">
+      <header class="nav">
+        <div class="logo">Trekt<small>Product education platform</small></div>
+        <nav class="nav-menu">
+          <a href="#">Certificates</a>
+          <a href="#">Testimonials</a>
+          <a href="#">Partners</a>
+          <a href="#">FAQ</a>
+          <a href="#" class="outline-btn">Contact us</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div>
+          <h2>We build product managers</h2>
+          <p>Get your next Product Management job or promotion.</p>
+          <div class="hero-actions">
+            <a href="#" class="primary-btn">Take the test</a>
+            <a href="#" class="ghost-btn">Learn more</a>
+          </div>
+        </div>
+        <div class="img-box">
+          <img src="https://undraw.co/api/illustrations/8a4e31a6-2aa2-4671-b976-731f1fdbde3b" alt="Hero illustration" />
+        </div>
+      </section>
+
+      <section class="features">
+        <article class="feature">
+          <i>👨‍💻</i>
+          <h4>Live Online</h4>
+          <p>Learn, interact and participate from home</p>
+        </article>
+        <article class="feature">
+          <i>🧩</i>
+          <h4>Applied Projects</h4>
+          <p>Deal with real-world projects relevant to your learning program</p>
+        </article>
+        <article class="feature">
+          <i>🧠</i>
+          <h4>Mentorship</h4>
+          <p>Keep engaged with mentor assistance during your learning</p>
+        </article>
+        <article class="feature">
+          <i>📜</i>
+          <h4>Certification</h4>
+          <p>Earn a certificate the employers will recognize</p>
+        </article>
+      </section>
+
+      <section class="title-center">
+        <h3>How a Trekt Certificate Accelerates Your Career Growth</h3>
+        <p>
+          Our Certificates are the most inclusive yet-recognized credentials by employers hiring product managers.
+        </p>
+      </section>
+
+      <section class="course-row">
+        <div class="img-box">
+          <img src="https://undraw.co/api/illustrations/52c6bf13-d38b-4ba5-a46e-0566cb1ce423" alt="Product manager certificate" />
+        </div>
+        <div class="course-content">
+          <h4>Product Manager Certificate</h4>
+          <div class="course-meta"><span>⏱ 40 Hours</span><span>📘 10 Modules</span></div>
+          <p><strong>Perfect for:</strong> Aspiring Product Managers from any professional background.</p>
+          <p><strong>Get your first product management job:</strong> Learn how to build digital products from end to end.</p>
+          <div class="cta-row">
+            <a href="#" class="primary-btn">Join now</a>
+            <a href="#" class="ghost-btn">View program</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="course-row reverse">
+        <div class="img-box">
+          <img src="https://undraw.co/api/illustrations/85dc0fdb-fad5-4068-9036-9d5b4fdad65c" alt="Product leader certificate" />
+        </div>
+        <div class="course-content">
+          <h4>Product Leader Certificate</h4>
+          <div class="course-meta"><span>⏱ 40 Hours</span><span>📘 10 Modules</span></div>
+          <p><strong>Perfect for:</strong> PMCs graduates or existing Product Managers with 3+ years of experience.</p>
+          <p><strong>Move up the product management career ladder:</strong> Operate as a senior-level PM.</p>
+          <div class="cta-row">
+            <a href="#" class="primary-btn">Join now</a>
+            <a href="#" class="ghost-btn">View program</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="course-row">
+        <div class="img-box">
+          <img src="https://undraw.co/api/illustrations/f8f7c2c8-bce7-42a4-9cc8-73b66f6c5b9c" alt="Product executive certificate" />
+        </div>
+        <div class="course-content">
+          <h4>Product Executive Certificate</h4>
+          <div class="course-meta"><span>⏱ 20 Hours</span><span>📘 5 Modules</span></div>
+          <p><strong>Perfect for:</strong> PLC graduates or existing Product Managers with 5+ years of experience.</p>
+          <p><strong>Join the C-Suite:</strong> Our most advanced certificate is restricted to proven product leaders.</p>
+          <div class="cta-row">
+            <a href="#" class="primary-btn">Join now</a>
+            <a href="#" class="ghost-btn">View program</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="purple-banner">
+        <div>
+          <h4>Find out how good you are at product management</h4>
+          <p>Take a simple test to determine your level of knowledge. Answer a few questions and we will send a suitable course program to your email.</p>
+          <a href="#" class="primary-btn">Take the test</a>
+        </div>
+        <div class="img-box">
+          <img src="https://undraw.co/api/illustrations/cf6f0f3d-7f06-4df0-a5a0-3362fe715f90" alt="Assessment illustration" />
+        </div>
+      </section>
+
+      <section class="why">
+        <div class="img-box">
+          <img src="https://undraw.co/api/illustrations/8b9ecfd5-9051-4af1-a8cb-e5bcfcd4f7f3" alt="Why choose trekt" />
+        </div>
+        <div>
+          <h4>Why Choose Trekt</h4>
+          <p>Trekt provides an unmatched online learning experience, with a world-class, data-driven learning platform and practical feedback.</p>
+          <ul>
+            <li>challenging and innovative product exercises</li>
+            <li>mentorship throughout the course</li>
+            <li>ways to ace product interviews</li>
+            <li>connections to the best companies hiring product managers</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
